@@ -27,6 +27,9 @@ class AddInfo extends Component{
 
   render(){
     return(
+      <div className="container">
+      <div className="row">
+      <div className="col s12">
       <form onSubmit={this.handleSubmit}>
        <label>Name</label>
        <input type="text" id='name' value={this.state.name} onChange={this.handleChange}/> <br />
@@ -35,9 +38,14 @@ class AddInfo extends Component{
        <label>Mobile Number</label>
        <input type="text" id='contact' value={this.state.contact} onChange={this.handleChange}/> <br />
        <label>Address</label>
-       <textarea type="text" id="address" value={this.state.address} rows="3" cols="50" />
-       <button> Submit </button>
+       <textarea type="text" id="address" className="materialize-textarea" value={this.state.address} onChange={this.handleChange}/>
+       <button class="btn waves-effect waves-light"  type="submit" name="action"> Submit
+          <i class="material-icons right"></i>
+       </button>
       </form>
+      </div>
+      </div>
+      </div>
     )
   }
 }

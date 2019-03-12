@@ -9,7 +9,7 @@ class Home extends Component {
         axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
             console.log(res)
             this.setState({
-                posts: res.data.slice(0, 9)
+                posts: res.data.slice(0, 7)
             })
         })
     }
@@ -19,14 +19,22 @@ class Home extends Component {
         const postList = posts.length ? (
             posts.map(post => {
                 return (
-                    <div key={post.id} >
-                      <p>{post.title}</p>
-                      <p>{post.body}</p>
-                    </div>
+
+                       <div className="row">
+                         <div className="col s12 m12" key={post.id} >
+                           <div className="card deep-purple lighten-2">
+                             <div className="card-content black-text">
+                                <p>{post.title}</p>
+                                <p>{post.body}</p>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+
                 )
             })
         ) : (
-                <div>No Post Yet</div>
+                <div className="card deep-purple lighten-2">No Post Yet</div>
             )
         return (
             <div>
