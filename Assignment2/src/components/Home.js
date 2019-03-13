@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './home.css';
 import axios from 'axios';
 
 class Home extends Component {
@@ -22,7 +23,7 @@ class Home extends Component {
 
                        <div className="row">
                          <div className="col s12 m12" key={post.id} >
-                           <div className="card deep-purple lighten-2">
+                           <div className="card deep-purple lighten-2 ani">
                              <div className="card-content black-text">
                                 <p>{post.title}</p>
                                 <p>{post.body}</p>
